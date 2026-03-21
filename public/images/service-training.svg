@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+  <defs>
+    <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="500" fill="url(#g5)"/>
+  <text x="500" y="250" font-family="Arial" font-size="48" fill="white" text-anchor="middle" dominant-baseline="middle" opacity="0.3">Training</text>
+</svg>

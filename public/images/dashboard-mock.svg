@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#111111"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="60" fill="#1a1a1a"/>
+  <circle cx="30" cy="30" r="8" fill="#333"/>
+  <circle cx="55" cy="30" r="8" fill="#333"/>
+  <circle cx="80" cy="30" r="8" fill="#333"/>
+  <text x="600" y="35" font-family="Arial" font-size="14" fill="white" text-anchor="middle" opacity="0.5">MES Dashboard - Production Overview</text>
+  <!-- Sidebar -->
+  <rect x="0" y="60" width="200" height="740" fill="#0d0d0d"/>
+  <rect x="15" y="80" width="170" height="30" rx="6" fill="#1f1f1f"/>
+  <rect x="15" y="120" width="170" height="30" rx="6" fill="#141414"/>
+  <rect x="15" y="160" width="170" height="30" rx="6" fill="#141414"/>
+  <rect x="15" y="200" width="170" height="30" rx="6" fill="#141414"/>
+  <rect x="15" y="240" width="170" height="30" rx="6" fill="#141414"/>
+  <!-- Main KPIs -->
+  <rect x="220" y="80" width="230" height="120" rx="12" fill="#1a1a1a"/>
+  <text x="335" y="120" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">OEE</text>
+  <text x="335" y="165" font-family="Arial" font-size="36" fill="white" text-anchor="middle" font-weight="bold">87.4%</text>
+  <rect x="470" y="80" width="230" height="120" rx="12" fill="#1a1a1a"/>
+  <text x="585" y="120" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Throughput</text>
+  <text x="585" y="165" font-family="Arial" font-size="36" fill="white" text-anchor="middle" font-weight="bold">1,247</text>
+  <rect x="720" y="80" width="230" height="120" rx="12" fill="#1a1a1a"/>
+  <text x="835" y="120" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Downtime</text>
+  <text x="835" y="165" font-family="Arial" font-size="36" fill="white" text-anchor="middle" font-weight="bold">2.1h</text>
+  <rect x="970" y="80" width="210" height="120" rx="12" fill="#1a1a1a"/>
+  <text x="1075" y="120" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Quality</text>
+  <text x="1075" y="165" font-family="Arial" font-size="36" fill="white" text-anchor="middle" font-weight="bold">99.2%</text>
+  <!-- Chart area -->
+  <rect x="220" y="220" width="480" height="280" rx="12" fill="#1a1a1a"/>
+  <text x="460" y="250" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Production Output (24h)</text>
+  <line x1="260" y1="460" x2="660" y2="460" stroke="#333" stroke-width="1"/>
+  <polyline points="280,400 340,380 400,420 460,350 520,370 580,330 640,360" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+  <!-- Table area -->
+  <rect x="720" y="220" width="460" height="280" rx="12" fill="#1a1a1a"/>
+  <text x="950" y="250" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Active Production Lines</text>
+  <rect x="740" y="270" width="420" height="35" rx="4" fill="#222"/>
+  <rect x="740" y="315" width="420" height="35" rx="4" fill="#1a1a1a"/>
+  <rect x="740" y="360" width="420" height="35" rx="4" fill="#222"/>
+  <rect x="740" y="405" width="420" height="35" rx="4" fill="#1a1a1a"/>
+  <rect x="740" y="450" width="420" height="35" rx="4" fill="#222"/>
+  <!-- Bottom widgets -->
+  <rect x="220" y="520" width="960" height="260" rx="12" fill="#1a1a1a"/>
+  <text x="700" y="560" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Real-Time Machine Status</text>
+  <rect x="260" y="580" width="100" height="60" rx="8" fill="#1a3a1a"/>
+  <rect x="380" y="580" width="100" height="60" rx="8" fill="#1a3a1a"/>
+  <rect x="500" y="580" width="100" height="60" rx="8" fill="#3a1a1a"/>
+  <rect x="620" y="580" width="100" height="60" rx="8" fill="#1a3a1a"/>
+  <rect x="740" y="580" width="100" height="60" rx="8" fill="#1a3a1a"/>
+  <rect x="860" y="580" width="100" height="60" rx="8" fill="#1a1a3a"/>
+  <rect x="980" y="580" width="100" height="60" rx="8" fill="#1a3a1a"/>
+  <rect x="260" y="660" width="100" height="60" rx="8" fill="#1a3a1a"/>
+  <rect x="380" y="660" width="100" height="60" rx="8" fill="#1a1a3a"/>
+  <rect x="500" y="660" width="100" height="60" rx="8" fill="#1a3a1a"/>
+  <rect x="620" y="660" width="100" height="60" rx="8" fill="#1a3a1a"/>
+  <rect x="740" y="660" width="100" height="60" rx="8" fill="#3a1a1a"/>
+  <rect x="860" y="660" width="100" height="60" rx="8" fill="#1a3a1a"/>
+  <rect x="980" y="660" width="100" height="60" rx="8" fill="#1a3a1a"/>
+</svg>

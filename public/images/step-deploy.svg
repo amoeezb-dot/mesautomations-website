@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+  <rect width="1000" height="500" fill="#1e293b"/>
+  <circle cx="500" cy="250" r="120" fill="#0ea5e9" opacity="0.3"/>
+  <text x="500" y="250" font-family="Arial" font-size="40" fill="white" text-anchor="middle" dominant-baseline="middle" opacity="0.5">03 Deploy</text>
+</svg>
