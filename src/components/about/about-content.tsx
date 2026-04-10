@@ -1,91 +1,77 @@
 "use client";
 
-import {
-  HighlightGroup,
-  HighlighterItem,
-} from "@/components/shared/highlight-group";
-import { AnimatedTestimonialsImage } from "@/components/shared/animated-testimonials-image";
-import { VALUES, TEAM_MEMBERS } from "@/lib/data";
-import { Target, Eye, Crosshair, Handshake, Lightbulb, Shield } from "lucide-react";
+import { motion } from "framer-motion";
+import { Linkedin, MapPin } from "lucide-react";
+import { SectionHeader } from "@/components/shared/section-header";
+import { useLocale } from "@/context/locale-context";
 
-const valueIcons = [Crosshair, Shield, Handshake, Lightbulb];
+const t = {
+  pageTitle:    { en: "About",                              de: "Über mich" },
+  pageSubtitle: { en: "MES Engineer & Manufacturing IT Specialist", de: "MES-Ingenieur & Manufacturing-IT-Spezialist" },
+  role:         { en: "MES Engineer & Manufacturing IT Specialist", de: "MES-Ingenieur & Manufacturing-IT-Spezialist" },
+  location:     { en: "Nürnberg, Germany",                 de: "Nürnberg, Deutschland" },
+  bio1: {
+    en: "With hands-on experience in automotive and semiconductor manufacturing, I specialize in MES configuration, SAP integration, and production data visualization. I work end-to-end — from shopfloor PLC systems to enterprise SAP modules — ensuring stable, traceable, and optimized production processes.",
+    de: "Mit praktischer Erfahrung in der Automobil- und Halbleiterfertigung bin ich spezialisiert auf MES-Konfiguration, SAP-Integration und die Visualisierung von Produktionsdaten. Ich arbeite durchgängig – von SPS-Systemen auf Shopfloor-Ebene bis hin zu SAP-Enterprise-Modulen – und sorge für stabile, rückverfolgbare und optimierte Produktionsprozesse.",
+  },
+  bio2: {
+    en: "My background spans Camline MES environments in both semiconductor and automotive series production, where I supported workflow configuration, traceability systems, and the alignment of production data with SAP PP/MM. I also build dashboards in Power BI and Grafana to give engineers and production teams real-time visibility into operations.",
+    de: "Mein Hintergrund umfasst Camline-MES-Umgebungen in der Halbleiter- und Automotive-Serienproduktion, wo ich Workflow-Konfigurationen, Rückverfolgbarkeitssysteme und die Abstimmung von Produktionsdaten mit SAP PP/MM unterstützte. Darüber hinaus entwickle ich Dashboards in Power BI und Grafana, um Ingenieuren und Produktionsteams in Echtzeit Einblick in den Betrieb zu geben.",
+  },
+};
 
 export function AboutContent() {
+  const { locale } = useLocale();
+
   return (
     <>
-      {/* Company Story */}
-      <div className="max-w-3xl mx-auto mb-20">
-        <p className="text-lg text-muted-foreground leading-relaxed">
-          MES Automation Consulting & Services was founded by a group of
-          industrial engineers and software architects who saw a widening gap
-          between what modern manufacturing technology could offer — and what
-          most factories were actually using. Based in Germany, the epicenter of
-          European manufacturing excellence, we set out to make world-class
-          automation accessible to businesses of all sizes.
-        </p>
-      </div>
-
-      {/* Mission & Vision */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-        <div className="bg-card border rounded-2xl p-8">
-          <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-            <Target className="h-6 w-6 text-primary" />
+      <SectionHeader title={t.pageTitle[locale]} subtitle={t.pageSubtitle[locale]} />
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{
+          duration: 0.8,
+          ease: [0.25, 0.4, 0.25, 1] as [number, number, number, number],
+        }}
+        className="mt-8 md:mt-12 max-w-3xl"
+      >
+        <div className="bg-zinc-900 border border-white/[0.08] rounded-2xl md:rounded-3xl p-6 md:p-10 space-y-6">
+          <div>
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-1">
+              Abdul Moeez Baig
+            </h2>
+            <p className="text-sm text-white/50 font-medium tracking-wide">
+              {t.role[locale]}
+            </p>
           </div>
-          <h3 className="text-2xl font-bold mb-3">Our Mission</h3>
-          <p className="text-muted-foreground leading-relaxed">
-            To accelerate the digital transformation of manufacturing through
-            intelligent automation, data-driven decision-making, and
-            people-first consulting.
-          </p>
-        </div>
-        <div className="bg-card border rounded-2xl p-8">
-          <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-            <Eye className="h-6 w-6 text-primary" />
+
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <MapPin className="h-4 w-4 text-white/40 shrink-0" />
+            <span>{t.location[locale]}</span>
           </div>
-          <h3 className="text-2xl font-bold mb-3">Our Vision</h3>
-          <p className="text-muted-foreground leading-relaxed">
-            A future where every factory — regardless of size — operates with
-            the efficiency, precision, and transparency of Industry 4.0.
+
+          <p className="text-base text-white/60 leading-relaxed">
+            {t.bio1[locale]}
           </p>
+
+          <p className="text-base text-white/60 leading-relaxed">
+            {t.bio2[locale]}
+          </p>
+
+          <div className="pt-2">
+            <a
+              href="https://www.linkedin.com/in/moeez-abdul/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/[0.06] border border-white/[0.1] text-sm font-semibold text-white/80 hover:bg-white/[0.1] hover:text-white transition-colors"
+            >
+              <Linkedin className="h-4 w-4" />
+              LinkedIn
+            </a>
+          </div>
         </div>
-      </div>
-
-      {/* Values */}
-      <div className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-10">Our Values</h2>
-        <HighlightGroup className="group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {VALUES.map((value, index) => {
-            const Icon = valueIcons[index];
-            return (
-              <HighlighterItem key={value.title} className="rounded-3xl">
-                <div className="relative z-20 h-full bg-card rounded-3xl p-6 border text-center">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 mx-auto">
-                    <Icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">{value.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {value.description}
-                  </p>
-                </div>
-              </HighlighterItem>
-            );
-          })}
-        </HighlightGroup>
-      </div>
-
-      {/* Team */}
-      <div>
-        <h2 className="text-3xl font-bold text-center mb-4">Meet the Team</h2>
-        <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Our leadership team brings decades of combined experience in
-          industrial automation, systems integration, and manufacturing
-          excellence.
-        </p>
-        <AnimatedTestimonialsImage
-          testimonials={[...TEAM_MEMBERS]}
-          autoplay
-        />
-      </div>
+      </motion.div>
     </>
   );
 }

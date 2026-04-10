@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { Providers } from "@/components/layout/providers";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,11 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "MES Automation Consulting & Services",
+    default: "MES Automation",
     template: "%s | MES Automation",
   },
   description:
-    "Your trusted partner for end-to-end manufacturing execution and industrial automation in Germany and the EU.",
+    "MES & Manufacturing IT Solutions for Industrial Production. Supporting automotive and semiconductor environments.",
 };
 
 export default function RootLayout({
@@ -34,9 +35,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <Providers>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

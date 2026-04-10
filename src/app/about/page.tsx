@@ -1,21 +1,16 @@
 import type { Metadata } from "next";
-import { SectionHeader } from "@/components/shared/section-header";
 import { AboutContent } from "@/components/about/about-content";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About",
   description:
-    "Learn about MES Automation's mission, vision, values, and the team driving industrial innovation.",
+    "MES Engineer and Manufacturing IT Specialist based in Nürnberg, Germany.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="py-24 px-4 md:px-6">
+    <div className="pt-20 md:pt-32 pb-16 md:pb-24 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
-        <SectionHeader
-          title="About Us"
-          subtitle="Founded by industrial engineers and software architects who saw a widening gap between what modern manufacturing technology could offer — and what most factories were actually using."
-        />
         <AboutContent />
       </div>
     </div>
