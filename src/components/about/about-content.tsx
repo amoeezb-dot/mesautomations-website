@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Linkedin, MapPin } from "lucide-react";
 import { SectionHeader } from "@/components/shared/section-header";
@@ -37,13 +38,24 @@ export function AboutContent() {
         className="mt-8 md:mt-12 max-w-3xl"
       >
         <div className="bg-zinc-900 border border-white/[0.08] rounded-2xl md:rounded-3xl p-6 md:p-10 space-y-6">
-          <div>
-            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-1">
-              Abdul Moeez Baig
-            </h2>
-            <p className="text-sm text-white/50 font-medium tracking-wide">
-              {t.role[locale]}
-            </p>
+          <div className="flex items-center gap-5">
+            <div className="relative shrink-0 h-20 w-20 md:h-24 md:w-24 rounded-full overflow-hidden border-2 border-white/[0.12]">
+              <Image
+                src="/images/moeez.jpeg"
+                alt="Abdul Moeez Baig"
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </div>
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold text-foreground mb-1">
+                Abdul Moeez Baig
+              </h2>
+              <p className="text-sm text-white/50 font-medium tracking-wide">
+                {t.role[locale]}
+              </p>
+            </div>
           </div>
 
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
