@@ -4,6 +4,7 @@ import {
   Workflow,
   BarChart3,
   Code2,
+  Headset,
   type LucideIcon,
 } from "lucide-react";
 
@@ -78,6 +79,18 @@ export const SERVICES: readonly Service[] = [
       de: "Python-basierte Automatisierung, API-Integrationen und Datenverarbeitungsskripte zur Unterstützung von Engineering-Workflows und Reduzierung manueller Tätigkeiten.",
     },
     icon: Code2,
+  },
+  {
+    id: 6,
+    title: {
+      en: "On-Site IT Support",
+      de: "Vor-Ort-IT-Support",
+    },
+    description: {
+      en: "Flexible on-site IT support for short-term engagements, interim staffing, or project-based assignments — from a single day to extended contracts.",
+      de: "Flexibler Vor-Ort-IT-Support für kurzfristige Einsätze, Interimsstellen oder projektbasierte Aufträge – von einem Tag bis zu längerfristigen Engagements.",
+    },
+    icon: Headset,
   },
 ];
 
