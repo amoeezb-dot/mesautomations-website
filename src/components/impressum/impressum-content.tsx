@@ -76,6 +76,17 @@ export function ImpressumContent() {
 
       <section>
         <h2 className="text-base font-semibold text-foreground mb-2">
+          {en ? "Professional Chamber" : "Berufsständische Kammer"}
+        </h2>
+        <p>
+          {en
+            ? "I am not a member of any professional or trade chamber. IT consulting and MES engineering are not regulated professions in Germany."
+            : "Ich bin kein Mitglied einer berufsständischen Kammer. IT-Beratung und MES-Ingenieurleistungen sind in Deutschland keine reglementierten Berufe."}
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-base font-semibold text-foreground mb-2">
           {en ? "Liability for Content" : "Haftung für Inhalte"}
         </h2>
         {en ? (
