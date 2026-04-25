@@ -4,16 +4,33 @@ import { motion } from "framer-motion";
 import { Circle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-function Pad({ cx, cy, r = 2.5 }: { cx: number; cy: number; r?: number }) {
+function Pad({ cx, cy, r = 4 }: { cx: number; cy: number; r?: number }) {
   return (
-    <circle
-      cx={cx}
-      cy={cy}
-      r={r}
-      fill="rgba(255,255,255,0.12)"
-      stroke="rgba(255,255,255,0.18)"
-      strokeWidth={0.5}
-    />
+    <g>
+      {/* Glow ring */}
+      <circle
+        cx={cx}
+        cy={cy}
+        r={r + 4}
+        fill="rgba(96,210,255,0.06)"
+      />
+      {/* Outer ring */}
+      <circle
+        cx={cx}
+        cy={cy}
+        r={r}
+        fill="rgba(30,30,30,1)"
+        stroke="rgba(96,210,255,0.55)"
+        strokeWidth={1.2}
+      />
+      {/* Inner dot */}
+      <circle
+        cx={cx}
+        cy={cy}
+        r={r * 0.4}
+        fill="rgba(96,210,255,0.7)"
+      />
+    </g>
   );
 }
 
@@ -22,36 +39,46 @@ function Signal({
   duration,
   delay,
   repeatDelay = 2,
-  color = "rgba(96,210,255,0.75)",
+  color = "rgba(96,210,255,1)",
+  glowColor = "rgba(96,210,255,0.35)",
 }: {
   d: string;
   duration: number;
   delay: number;
   repeatDelay?: number;
   color?: string;
+  glowColor?: string;
 }) {
   return (
-    <motion.path
-      d={d}
-      stroke={color}
-      strokeWidth={1.5}
-      fill="none"
-      strokeLinecap="round"
-      strokeDasharray="10 2500"
-      animate={{ strokeDashoffset: [2500, -20] }}
-      transition={{
-        duration,
-        delay,
-        repeat: Infinity,
-        ease: "linear",
-        repeatDelay,
-      }}
-    />
+    <g>
+      {/* Wide glow layer */}
+      <motion.path
+        d={d}
+        stroke={glowColor}
+        strokeWidth={6}
+        fill="none"
+        strokeLinecap="round"
+        strokeDasharray="18 2500"
+        animate={{ strokeDashoffset: [2500, -20] }}
+        transition={{ duration, delay, repeat: Infinity, ease: "linear", repeatDelay }}
+      />
+      {/* Core bright signal */}
+      <motion.path
+        d={d}
+        stroke={color}
+        strokeWidth={2}
+        fill="none"
+        strokeLinecap="round"
+        strokeDasharray="14 2500"
+        animate={{ strokeDashoffset: [2500, -20] }}
+        transition={{ duration, delay, repeat: Infinity, ease: "linear", repeatDelay }}
+      />
+    </g>
   );
 }
 
 function CircuitBackground() {
-  const trace = "rgba(255,255,255,0.06)";
+  const trace = "rgba(255,255,255,0.1)";
   const tw = 1;
 
   return (
@@ -70,9 +97,9 @@ function CircuitBackground() {
       <path d="M 130 700 V 610 H 230 V 530 H 330 V 590 H 450" stroke={trace} strokeWidth={tw} fill="none" />
 
       {/* Left IC outlines */}
-      <rect x="155" y="95" width="70" height="120" rx="2" fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth={0.8} />
-      <rect x="295" y="185" width="55" height="75" rx="2" fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth={0.8} />
-      <rect x="75" y="360" width="70" height="90" rx="2" fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth={0.8} />
+      <rect x="155" y="95" width="70" height="120" rx="2" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth={0.8} />
+      <rect x="295" y="185" width="55" height="75" rx="2" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth={0.8} />
+      <rect x="75" y="360" width="70" height="90" rx="2" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth={0.8} />
 
       {/* Left pads */}
       <Pad cx={160} cy={110} /><Pad cx={300} cy={110} /><Pad cx={300} cy={200} />
@@ -92,9 +119,9 @@ function CircuitBackground() {
       <path d="M 1070 700 V 615 H 970 V 540 H 870 V 600 H 750" stroke={trace} strokeWidth={tw} fill="none" />
 
       {/* Right IC outlines */}
-      <rect x="975" y="75" width="70" height="120" rx="2" fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth={0.8} />
-      <rect x="845" y="265" width="55" height="75" rx="2" fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth={0.8} />
-      <rect x="1055" y="340" width="70" height="90" rx="2" fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth={0.8} />
+      <rect x="975" y="75" width="70" height="120" rx="2" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth={0.8} />
+      <rect x="845" y="265" width="55" height="75" rx="2" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth={0.8} />
+      <rect x="1055" y="340" width="70" height="90" rx="2" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth={0.8} />
 
       {/* Right pads */}
       <Pad cx={1040} cy={90} /><Pad cx={900} cy={90} /><Pad cx={900} cy={170} />
@@ -111,9 +138,9 @@ function CircuitBackground() {
       <Signal d="M 130 700 V 610 H 230 V 530 H 330 V 590 H 450" duration={4} delay={2.5} repeatDelay={2.2} />
 
       {/* Animated signal pulses — right */}
-      <Signal d="M 1200 150 H 1040 V 90 H 900 V 170 H 780 V 110 H 720" duration={4.5} delay={0.6} repeatDelay={2} color="rgba(96,210,255,0.6)" />
-      <Signal d="M 1200 410 H 1120 V 355 H 1020 V 415 H 910 V 360 H 810" duration={5.2} delay={1.8} repeatDelay={1.5} color="rgba(96,210,255,0.6)" />
-      <Signal d="M 1070 700 V 615 H 970 V 540 H 870 V 600 H 750" duration={4.2} delay={3} repeatDelay={2.5} color="rgba(96,210,255,0.6)" />
+      <Signal d="M 1200 150 H 1040 V 90 H 900 V 170 H 780 V 110 H 720" duration={4.5} delay={0.6} repeatDelay={2} />
+      <Signal d="M 1200 410 H 1120 V 355 H 1020 V 415 H 910 V 360 H 810" duration={5.2} delay={1.8} repeatDelay={1.5} />
+      <Signal d="M 1070 700 V 615 H 970 V 540 H 870 V 600 H 750" duration={4.2} delay={3} repeatDelay={2.5} />
     </svg>
   );
 }
@@ -146,7 +173,7 @@ function HeroGeometric({
 
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/[0.03] via-transparent to-cyan-500/[0.02] blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/[0.04] via-transparent to-cyan-500/[0.02] blur-3xl" />
 
       <CircuitBackground />
 
