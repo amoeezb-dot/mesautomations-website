@@ -8,8 +8,8 @@ import { useLocale } from "@/context/locale-context";
 
 const t = {
   description: {
-    en: "MES Configuration · SAP Integration · Production Systems",
-    de: "MES-Konfiguration · SAP-Integration · Produktionssysteme",
+    en: "Automotive · Semiconductor · Industrial IT",
+    de: "Automotive · Halbleiter · Industrial IT",
   },
   cta: {
     en: "Explore Services",
@@ -22,9 +22,9 @@ export function HeroSection() {
 
   return (
     <HeroGeometric
-      badge="MES Consulting"
+      badge="Available for Freelance"
       title1="MES. Integration."
-      title2="Manufacturing IT."
+      title2="Production IT."
       description={t.description[locale]}
     >
       <div className="flex flex-col items-center gap-6">
