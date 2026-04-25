@@ -87,8 +87,8 @@ export const SERVICES: readonly Service[] = [
       de: "Vor-Ort-IT-Support",
     },
     description: {
-      en: "Flexible on-site IT support for short-term engagements, interim staffing, or project-based assignments — from a single day to extended contracts.",
-      de: "Flexibler Vor-Ort-IT-Support für kurzfristige Einsätze, Interimsstellen oder projektbasierte Aufträge – von einem Tag bis zu längerfristigen Engagements.",
+      en: "On-site IT support for short-term, interim, or project-based engagements — from a single day to extended contracts.",
+      de: "Vor-Ort-IT-Support für kurzfristige, Interim- oder projektbasierte Einsätze – von einem Tag bis zu längerfristigen Aufträgen.",
     },
     icon: Headset,
   },
