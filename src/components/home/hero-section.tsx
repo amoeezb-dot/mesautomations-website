@@ -24,7 +24,7 @@ export function HeroSection() {
     <HeroGeometric
       badge="MES Consulting"
       title1="MES. Integration."
-      title2="Automation."
+      title2="Manufacturing IT."
       description={t.description[locale]}
     >
       <div className="flex flex-col items-center gap-6">
