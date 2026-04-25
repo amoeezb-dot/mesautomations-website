@@ -23,8 +23,8 @@ const ALL_RIGHTS = {
 };
 
 const LEGAL_LABELS: Record<string, { en: string; de: string }> = {
-  "/impressum":   { en: "Impressum",        de: "Impressum" },
-  "/datenschutz": { en: "Data Protection",  de: "Datenschutzerklärung" },
+  "/impressum":   { en: "Legal Notice",          de: "Impressum" },
+  "/datenschutz": { en: "Data Protection",        de: "Datenschutzerklärung" },
 };
 
 export function Footer() {
