@@ -10,8 +10,6 @@ import {
   Briefcase,
   User,
   Mail,
-  FileText,
-  Shield,
   Menu,
   X,
   type LucideIcon,
@@ -32,9 +30,7 @@ const navItems: readonly NavItem[] = [
   { key: "services",   label: { en: "Services",   de: "Leistungen" }, url: "/services", icon: Wrench },
   { key: "experience", label: { en: "Experience", de: "Erfahrung"  }, url: "/projects", icon: Briefcase },
   { key: "about",      label: { en: "About",      de: "Über mich"  }, url: "/about",    icon: User },
-  { key: "contact",    label: { en: "Contact",    de: "Kontakt"    }, url: "/contact",    icon: Mail },
-  { key: "impressum",  label: { en: "Impressum",  de: "Impressum"  }, url: "/impressum",  icon: FileText },
-  { key: "datenschutz",label: { en: "Data Protection", de: "Datenschutz" }, url: "/datenschutz", icon: Shield },
+  { key: "contact",    label: { en: "Contact",    de: "Kontakt"    }, url: "/contact",  icon: Mail },
 ];
 
 export function Navbar() {
