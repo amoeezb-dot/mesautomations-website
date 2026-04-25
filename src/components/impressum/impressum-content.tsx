@@ -4,33 +4,34 @@ import { useLocale } from "@/context/locale-context";
 
 export function ImpressumContent() {
   const { locale } = useLocale();
+  const en = locale === "en";
 
   return (
     <div className="mt-8 md:mt-12 space-y-10 text-sm md:text-base text-muted-foreground leading-relaxed">
 
       <section>
         <h2 className="text-base font-semibold text-foreground mb-2">
-          Angaben gemäß § 5 TMG
+          {en ? "Details pursuant to § 5 TMG" : "Angaben gemäß § 5 TMG"}
         </h2>
         <p>
           Abdul Moeez Baig
           <br />
-          {locale === "en" ? "Freelance MES IT Specialist" : "Freiberuflicher MES IT Spezialist"}
+          {en ? "Freelance MES IT Specialist" : "Freiberuflicher MES IT Spezialist"}
           <br />
           Kollwitzstraße 12
           <br />
           90439 Nürnberg
           <br />
-          Deutschland
+          {en ? "Germany" : "Deutschland"}
         </p>
       </section>
 
       <section>
         <h2 className="text-base font-semibold text-foreground mb-2">
-          Kontakt
+          {en ? "Contact" : "Kontakt"}
         </h2>
         <p>
-          Telefon: +49 159 06154079
+          {en ? "Phone" : "Telefon"}: +49 159 06154079
           <br />
           E-Mail:{" "}
           <a
@@ -44,21 +45,23 @@ export function ImpressumContent() {
 
       <section>
         <h2 className="text-base font-semibold text-foreground mb-2">
-          Umsatzsteuer-ID gemäß § 27a UStG
+          {en ? "VAT ID pursuant to § 27a UStG" : "Umsatzsteuer-ID gemäß § 27a UStG"}
         </h2>
         <p>DE460552467</p>
       </section>
 
       <section>
         <h2 className="text-base font-semibold text-foreground mb-2">
-          Steuernummer
+          {en ? "Tax Number" : "Steuernummer"}
         </h2>
         <p>240/202/31625</p>
       </section>
 
       <section>
         <h2 className="text-base font-semibold text-foreground mb-2">
-          Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+          {en
+            ? "Person Responsible for Content pursuant to § 18 para. 2 MStV"
+            : "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV"}
         </h2>
         <p>
           Abdul Moeez Baig
@@ -67,15 +70,15 @@ export function ImpressumContent() {
           <br />
           90439 Nürnberg
           <br />
-          Deutschland
+          {en ? "Germany" : "Deutschland"}
         </p>
       </section>
 
       <section>
         <h2 className="text-base font-semibold text-foreground mb-2">
-          {locale === "en" ? "Liability for Content" : "Haftung für Inhalte"}
+          {en ? "Liability for Content" : "Haftung für Inhalte"}
         </h2>
-        {locale === "en" ? (
+        {en ? (
           <>
             <p className="mb-3">
               As a service provider, we are responsible for our own content on
@@ -120,10 +123,10 @@ export function ImpressumContent() {
 
       <section>
         <h2 className="text-base font-semibold text-foreground mb-2">
-          {locale === "en" ? "Liability for Links" : "Haftung für Links"}
+          {en ? "Liability for Links" : "Haftung für Links"}
         </h2>
         <p>
-          {locale === "en"
+          {en
             ? "Our website contains links to external third-party websites whose content we have no influence over. Therefore, we cannot accept any liability for this external content."
             : "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen."}
         </p>
@@ -131,10 +134,10 @@ export function ImpressumContent() {
 
       <section>
         <h2 className="text-base font-semibold text-foreground mb-2">
-          {locale === "en" ? "EU Dispute Resolution" : "EU-Streitschlichtung"}
+          {en ? "EU Dispute Resolution" : "EU-Streitschlichtung"}
         </h2>
         <p>
-          {locale === "en" ? (
+          {en ? (
             <>
               The European Commission provides a platform for online dispute
               resolution (ODR):{" "}
@@ -173,12 +176,12 @@ export function ImpressumContent() {
 
       <section>
         <h2 className="text-base font-semibold text-foreground mb-2">
-          {locale === "en"
+          {en
             ? "Consumer Dispute Resolution"
             : "Verbraucherstreitbeilegung"}
         </h2>
         <p>
-          {locale === "en"
+          {en
             ? "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
             : "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."}
         </p>
@@ -188,7 +191,7 @@ export function ImpressumContent() {
         <h2 className="text-base font-semibold text-foreground mb-2">
           Copyright
         </h2>
-        {locale === "en" ? (
+        {en ? (
           <p>
             The content and works created by the site operator on these pages
             are subject to German copyright law. Reproduction, editing,
