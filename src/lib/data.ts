@@ -22,10 +22,7 @@ export interface Service {
 export const SERVICES: readonly Service[] = [
   {
     id: 1,
-    title: {
-      en: "MES & Manufacturing Systems",
-      de: "MES & Fertigungssysteme",
-    },
+    title: { en: "MES & Manufacturing Systems", de: "MES & Fertigungssysteme" },
     description: {
       en: "Configuration and optimization of MES workflows, production tracking, and traceability in automotive and semiconductor environments.",
       de: "Konfiguration und Optimierung von MES-Workflows, Produktionsverfolgung und Rückverfolgbarkeit in Automobil- und Halbleiterumgebungen.",
@@ -34,10 +31,7 @@ export const SERVICES: readonly Service[] = [
   },
   {
     id: 2,
-    title: {
-      en: "SAP & Shopfloor Integration",
-      de: "SAP & Shopfloor-Integration",
-    },
+    title: { en: "SAP & Shopfloor Integration", de: "SAP & Shopfloor-Integration" },
     description: {
       en: "Integration of MES with SAP (PP/MM) and PLC-controlled systems, ensuring consistent production data and reliable system communication.",
       de: "Integration von MES mit SAP (PP/MM) und SPS-gesteuerten Systemen für konsistente Produktionsdaten und zuverlässige Systemkommunikation.",
@@ -46,10 +40,7 @@ export const SERVICES: readonly Service[] = [
   },
   {
     id: 3,
-    title: {
-      en: "Industrial Automation & Data Flow",
-      de: "Industrielle Automatisierung & Datenfluss",
-    },
+    title: { en: "Industrial Automation & Data Flow", de: "Industrielle Automatisierung & Datenfluss" },
     description: {
       en: "Design and implementation of data flows between production equipment, MES, and backend systems for stable and scalable manufacturing operations.",
       de: "Gestaltung und Implementierung von Datenflüssen zwischen Produktionsanlagen, MES und Backend-Systemen für stabile und skalierbare Fertigungsabläufe.",
@@ -58,10 +49,7 @@ export const SERVICES: readonly Service[] = [
   },
   {
     id: 4,
-    title: {
-      en: "Production Data & Dashboards",
-      de: "Produktionsdaten & Dashboards",
-    },
+    title: { en: "Production Data & Dashboards", de: "Produktionsdaten & Dashboards" },
     description: {
       en: "Development of Power BI and Grafana dashboards for real-time production monitoring, diagnostics, and decision support.",
       de: "Entwicklung von Power BI- und Grafana-Dashboards zur Echtzeit-Produktionsüberwachung, Diagnose und Entscheidungsunterstützung.",
@@ -70,10 +58,7 @@ export const SERVICES: readonly Service[] = [
   },
   {
     id: 5,
-    title: {
-      en: "Custom Automation & Scripting",
-      de: "Maßgeschneiderte Automatisierung & Scripting",
-    },
+    title: { en: "Custom Automation & Scripting", de: "Maßgeschneiderte Automatisierung & Scripting" },
     description: {
       en: "Python-based automation, API integrations, and data processing scripts to support engineering workflows and reduce manual effort.",
       de: "Python-basierte Automatisierung, API-Integrationen und Datenverarbeitungsskripte zur Unterstützung von Engineering-Workflows und Reduzierung manueller Tätigkeiten.",
@@ -82,10 +67,7 @@ export const SERVICES: readonly Service[] = [
   },
   {
     id: 6,
-    title: {
-      en: "On-Site IT Support",
-      de: "Vor-Ort-IT-Support",
-    },
+    title: { en: "On-Site IT Support", de: "Vor-Ort-IT-Support" },
     description: {
       en: "On-site IT support for short-term, interim, or project-based engagements — from a single day to extended contracts.",
       de: "Vor-Ort-IT-Support für kurzfristige, Interim- oder projektbasierte Einsätze – von einem Tag bis zu längerfristigen Aufträgen.",
@@ -148,13 +130,15 @@ export const TECH_CATEGORIES: readonly TechCategory[] = [
   {
     category: { en: "Machine & Equipment Vendors", de: "Maschinen & Anlagenhersteller" },
     skills: [
-      { en: "ASYS (I/O Handlers)", de: "ASYS (Ein-/Ausgabe-Handler)" },
+      { en: "ASYS (I/O Handlers & Loaders)", de: "ASYS (Ein-/Ausgabe-Handler & Loader)" },
       { en: "EKRA (Industrial Printers)", de: "EKRA (Industriedrucker)" },
       { en: "Wickon (Optical Inspection)", de: "Wickon (Optische Inspektion)" },
+      { en: "Viscom (SPI / AOI)", de: "Viscom (SPI / AOI)" },
       { en: "Polyphos (Laser Cutting)", de: "Polyphos (Laserschneiden)" },
-      { en: "Ceracon / Rehm (Oven)", de: "Ceracon / Rehm (Ofen)" },
-      { en: "BESI (Chip Assembler)", de: "BESI (Chip-Bestückung)" },
-      { en: "Boschmann (Chip Sintering)", de: "Boschmann (Chip-Sintern)" },
+      { en: "Ceracon (Oven)", de: "Ceracon (Ofen)" },
+      { en: "Rehm (Oven)", de: "Rehm (Ofen)" },
+      { en: "BESI (Assembler)", de: "BESI (Bestücker)" },
+      { en: "Boschman (Sintering)", de: "Boschman (Sintern)" },
       { en: "Montratec (Transport System)", de: "Montratec (Transportsystem)" },
     ],
   },
@@ -172,10 +156,7 @@ export interface ExperienceItem {
 export const EXPERIENCE_ITEMS: readonly ExperienceItem[] = [
   {
     id: 1,
-    title: {
-      en: "Semiconductor Production Environment",
-      de: "Halbleiter-Produktionsumgebung",
-    },
+    title: { en: "Semiconductor Production Environment", de: "Halbleiter-Produktionsumgebung" },
     description: {
       en: "Support of MES configuration and production workflows in a semiconductor manufacturing environment, ensuring traceability and stable data integration.",
       de: "Unterstützung bei MES-Konfiguration und Produktions-Workflows in einer Halbleiterfertigung – Sicherstellung der Rückverfolgbarkeit und stabilen Datenintegration.",
@@ -184,10 +165,7 @@ export const EXPERIENCE_ITEMS: readonly ExperienceItem[] = [
   },
   {
     id: 2,
-    title: {
-      en: "Automotive Manufacturing (Series Production)",
-      de: "Automobilfertigung (Serienproduktion)",
-    },
+    title: { en: "Automotive Manufacturing (Series Production)", de: "Automobilfertigung (Serienproduktion)" },
     description: {
       en: "MES system development and optimization from integration phase to stable production. Focus on workflow configuration, SAP alignment, and production data consistency.",
       de: "MES-Systementwicklung und -optimierung von der Integrationsphase bis zur stabilen Produktion. Schwerpunkt auf Workflow-Konfiguration, SAP-Ausrichtung und Produktionsdatenkonsistenz.",
@@ -196,10 +174,7 @@ export const EXPERIENCE_ITEMS: readonly ExperienceItem[] = [
   },
   {
     id: 3,
-    title: {
-      en: "Production Monitoring & Diagnostics",
-      de: "Produktionsmonitoring & Diagnostik",
-    },
+    title: { en: "Production Monitoring & Diagnostics", de: "Produktionsmonitoring & Diagnostik" },
     description: {
       en: "Development of dashboards using Power BI and Grafana to support engineers and production teams with real-time insights.",
       de: "Entwicklung von Dashboards mit Power BI und Grafana zur Unterstützung von Ingenieuren und Produktionsteams mit Echtzeit-Einblicken.",
