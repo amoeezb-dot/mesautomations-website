@@ -11,12 +11,17 @@ interface LocaleContextValue {
 
 const LocaleContext = createContext<LocaleContextValue | null>(null);
 
+function getInitialLocale(): Locale {
+  const saved = localStorage.getItem("locale");
+  if (saved === "en" || saved === "de") return saved;
+  return navigator.language.startsWith("de") ? "de" : "en";
+}
+
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocale] = useState<Locale>("de");
 
   useEffect(() => {
-    const saved = localStorage.getItem("locale");
-    if (saved === "en" || saved === "de") setLocale(saved);
+    setLocale(getInitialLocale());
   }, []);
 
   useEffect(() => {
