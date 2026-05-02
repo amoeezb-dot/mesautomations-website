@@ -6,14 +6,14 @@ export const SITE_CONFIG = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Experience", href: "/projects" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home",       href: "/" },
+  { label: "Services",   href: "/services" },
+  { label: "Experience", href: "/experience" },
+  { label: "About",      href: "/about" },
+  { label: "Contact",    href: "/contact" },
 ] as const;
 
 export const LEGAL_LINKS = [
-  { label: "Impressum", href: "/impressum" },
+  { label: "Impressum",           href: "/impressum" },
   { label: "Datenschutzerklärung", href: "/datenschutz" },
 ] as const;
