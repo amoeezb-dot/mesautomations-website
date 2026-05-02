@@ -5,11 +5,11 @@ import { SITE_CONFIG, NAV_LINKS, LEGAL_LINKS } from "@/lib/constants";
 import { useLocale } from "@/context/locale-context";
 
 const NAV_LABELS: Record<string, { en: string; de: string }> = {
-  "/":         { en: "Home",       de: "Startseite" },
-  "/services": { en: "Services",   de: "Leistungen" },
-  "/projects": { en: "Experience", de: "Erfahrung"  },
-  "/about":    { en: "About",      de: "Über mich"  },
-  "/contact":  { en: "Contact",    de: "Kontakt"    },
+  "/":           { en: "Home",       de: "Startseite" },
+  "/services":   { en: "Services",   de: "Leistungen" },
+  "/experience": { en: "Experience", de: "Erfahrung"  },
+  "/about":      { en: "About",      de: "Über mich"  },
+  "/contact":    { en: "Contact",    de: "Kontakt"    },
 };
 
 const TAGLINE = {
@@ -23,8 +23,8 @@ const ALL_RIGHTS = {
 };
 
 const LEGAL_LABELS: Record<string, { en: string; de: string }> = {
-  "/impressum":   { en: "Legal Notice",          de: "Impressum" },
-  "/datenschutz": { en: "Data Protection",        de: "Datenschutzerklärung" },
+  "/impressum":   { en: "Legal Notice",    de: "Impressum" },
+  "/datenschutz": { en: "Data Protection", de: "Datenschutzerklärung" },
 };
 
 export function Footer() {
