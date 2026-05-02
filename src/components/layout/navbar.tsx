@@ -26,11 +26,11 @@ interface NavItem {
 }
 
 const navItems: readonly NavItem[] = [
-  { key: "home",       label: { en: "Home",       de: "Startseite" }, url: "/",         icon: Home },
-  { key: "services",   label: { en: "Services",   de: "Leistungen" }, url: "/services", icon: Wrench },
-  { key: "experience", label: { en: "Experience", de: "Erfahrung"  }, url: "/projects", icon: Briefcase },
-  { key: "about",      label: { en: "About",      de: "Über mich"  }, url: "/about",    icon: User },
-  { key: "contact",    label: { en: "Contact",    de: "Kontakt"    }, url: "/contact",  icon: Mail },
+  { key: "home",       label: { en: "Home",       de: "Startseite" }, url: "/",           icon: Home },
+  { key: "services",   label: { en: "Services",   de: "Leistungen" }, url: "/services",   icon: Wrench },
+  { key: "experience", label: { en: "Experience", de: "Erfahrung"  }, url: "/experience", icon: Briefcase },
+  { key: "about",      label: { en: "About",      de: "Über mich"  }, url: "/about",      icon: User },
+  { key: "contact",    label: { en: "Contact",    de: "Kontakt"    }, url: "/contact",    icon: Mail },
 ];
 
 export function Navbar() {
