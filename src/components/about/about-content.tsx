@@ -33,17 +33,17 @@ export function AboutContent() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] as [number, number, number, number] }}
-        className="mt-8 md:mt-12 max-w-5xl"
+        className="mt-8 md:mt-12 w-full"
       >
         <div className="bg-zinc-900 border border-white/[0.08] rounded-2xl md:rounded-3xl overflow-hidden">
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row min-h-[420px]">
 
             {/* ── Left: Text content ── */}
-            <div className="flex-1 p-6 md:p-10 space-y-6">
+            <div className="flex-1 p-8 md:p-12 space-y-6">
 
               {/* Name + role */}
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-1 tracking-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-1 tracking-tight">
                   Abdul Moeez Baig
                 </h2>
                 <p className="text-sm text-white/40 font-medium tracking-wide uppercase">
@@ -71,7 +71,7 @@ export function AboutContent() {
               <div className="border-t border-white/[0.06]" />
 
               {/* Bio */}
-              <div className="space-y-4">
+              <div className="space-y-4 max-w-2xl">
                 <p className="text-base text-white/60 leading-relaxed">{t.bio1[locale]}</p>
                 <p className="text-base text-white/60 leading-relaxed">{t.bio2[locale]}</p>
               </div>
@@ -91,7 +91,7 @@ export function AboutContent() {
             </div>
 
             {/* ── Right: Faded photo ── */}
-            <div className="relative hidden md:block w-72 lg:w-80 shrink-0">
+            <div className="relative hidden md:block w-[38%] shrink-0">
               <Image
                 src="/images/moeez.jpeg"
                 alt="Abdul Moeez Baig"
@@ -100,7 +100,7 @@ export function AboutContent() {
                 priority
               />
               {/* Fade from left so it blends into the card */}
-              <div className="absolute inset-0 bg-gradient-to-r from-zinc-900 via-zinc-900/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-zinc-900 via-zinc-900/30 to-transparent" />
               {/* Subtle bottom fade */}
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent" />
             </div>
