@@ -119,10 +119,11 @@ export const TECH_CATEGORIES: readonly TechCategory[] = [
     ],
   },
   {
-    category: { en: "Data & Monitoring", de: "Daten & Monitoring" },
+    category: { en: "Monitoring & Logging", de: "Monitoring & Logging" },
     skills: [
       { en: "Power BI", de: "Power BI" },
       { en: "Grafana", de: "Grafana" },
+      { en: "Graylog", de: "Graylog" },
       { en: "SQL", de: "SQL" },
     ],
   },
@@ -131,7 +132,30 @@ export const TECH_CATEGORIES: readonly TechCategory[] = [
     skills: [
       { en: "Python", de: "Python" },
       { en: "C#", de: "C#" },
+      { en: "MATLAB", de: "MATLAB" },
       { en: "SQL", de: "SQL" },
+    ],
+  },
+  {
+    category: { en: "Protocols & Interfaces", de: "Protokolle & Schnittstellen" },
+    skills: [
+      { en: "SECS/GEM", de: "SECS/GEM" },
+      { en: "OPC-UA", de: "OPC-UA" },
+      { en: "XML", de: "XML" },
+      { en: "GEI", de: "GEI" },
+    ],
+  },
+  {
+    category: { en: "Machine & Equipment Vendors", de: "Maschinen & Anlagenhersteller" },
+    skills: [
+      { en: "ASYS (I/O Handlers)", de: "ASYS (Ein-/Ausgabe-Handler)" },
+      { en: "EKRA (Industrial Printers)", de: "EKRA (Industriedrucker)" },
+      { en: "Wickon (Optical Inspection)", de: "Wickon (Optische Inspektion)" },
+      { en: "Polyphos (Laser Cutting)", de: "Polyphos (Laserschneiden)" },
+      { en: "Ceracon / Rehm (Oven)", de: "Ceracon / Rehm (Ofen)" },
+      { en: "BESI (Chip Assembler)", de: "BESI (Chip-Bestückung)" },
+      { en: "Boschmann (Chip Sintering)", de: "Boschmann (Chip-Sintern)" },
+      { en: "Montratec (Transport System)", de: "Montratec (Transportsystem)" },
     ],
   },
 ];
